@@ -1,10 +1,11 @@
+import BookCardInfo from "@/components/BookCardInfo";
 import FormSearch from "@/components/FormSearch";
 
 const Home = () => {
   return (
     <>
       <FormSearch />
-      <article>todo el chamullo</article>
+      <BookCardInfo />
     </>
   );
 };

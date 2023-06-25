@@ -2,7 +2,7 @@ import SearchIcon from "@/components/icons/SearchIcon";
 
 const FormSearch = () => {
   return (
-    <form className="flex flex-wrap items-center gap-5 rounded-xl bg-amber-200 p-3">
+    <form className="flex flex-wrap items-center gap-5 rounded-xl bg-amber-200 p-3 mb-6">
         <span className="min-w-[20px]">
           <SearchIcon className="fill-amber-400" />
         </span>

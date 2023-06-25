@@ -2,3 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+.grid-areas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "a b b "
+    "a c c"
+    "d d d"
+    "e e e";
+}
+
+.section-image{
+    grid-area: a;
+}
+
+.section-info{
+    grid-area: b;
+}
+
+.section-origin{
+    grid-area: c;
+}
+.section-description{
+    grid-area: d;
+}
+.section-number{
+    grid-area: e;
+}
+
+
+@media (min-width: 1024px) {
+    .grid-areas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "a b c c"
+        "a d d d"
+        "a e e e";
+    }
+    
+}
