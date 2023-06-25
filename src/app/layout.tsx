@@ -1,7 +1,8 @@
+import Navbar from '../components/Navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={spaceGrotesk.className}>
+        <div className="grid place-content-center min-h-screen bg-blue-950">
+          <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
+            <Navbar/>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
