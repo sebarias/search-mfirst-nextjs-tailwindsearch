@@ -6,7 +6,7 @@ import { useState } from "react";
 import Book from "@/interfaces/book";
 
 const NEXT_URL =
-  process.env.NEXT_PUBLIC_VERCEL_URL || "http://localhost:3000";
+  process.env.VERCEL_URL || "http://localhost:3000";
 
 const Home = () => {
   const [book, setBook] = useState<Book | null>(null);
