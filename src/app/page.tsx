@@ -5,7 +5,7 @@ import FormSearch from "@/components/FormSearch";
 import { useState } from "react";
 import Book from "@/interfaces/book";
 
-export const NEXT_URL =
+const NEXT_URL =
   process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
 
 const Home = () => {
