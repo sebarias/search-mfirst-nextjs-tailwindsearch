@@ -14,6 +14,8 @@ const Home = () => {
   const [bookAntartica, setBookAntartica] = useState<Book | null>(null);
 
   const getBook = async (isbn: string) => {
+
+    console.log(process.env.URL_V, ", ", process.env.VERCEL_URL, process.env.VERCEL_BRANCH_URL,process.env.NEXT_PUBLIC_VERCEL_URL,process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL )
     const res = await fetch(`${NEXT_URL}/api/search?isbn=${isbn}`);
     const data = await res.json();
     setBook(data);
