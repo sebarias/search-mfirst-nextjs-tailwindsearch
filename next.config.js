@@ -31,4 +31,7 @@ module.exports = {
         },
       ],
     },
+    env: {
+      API_URL: 'https://search-mfirst-nextjs-tailwindsearch.vercel.app' // Reemplaza 'tu-url-de-vercel.com' con tu URL de Vercel
+    },
   }
