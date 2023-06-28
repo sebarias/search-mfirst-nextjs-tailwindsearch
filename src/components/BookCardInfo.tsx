@@ -1,40 +1,42 @@
+import Book from "@/interfaces/book";
 import Image from "next/image";
 
-const BookCardInfo = () => {
+interface Props {
+  book: Book;
+}
+
+const BookCardInfo = ({ book }: Props) => {
   return (
-    <article className=" grid-areas rounded-xl bg-amber-200 p-3 text-amber-500 ">
-      <div className="section-image">
+    <article className=" grid-areas mt-8 rounded-xl bg-amber-200 p-4 text-amber-500 ">
+      <div className="overflow-hidden section-image mr-1 grid place-content-center h-24 w-24 lg:mx-auto lg:h-36 lg:w-36">
         <Image
-          className="relative"
-          src="https://www.antartica.cl/media/catalog/product/9/7/9789564083643_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=300&width=240&canvas=240:300"
-          width={80}
-          height={80}
+          src={book.image}
+          width={100}
+          height={100}
           alt="Book image"
+          className="h-auto w-full"
+          placeholder="blur"
+          blurDataURL={book.image}
         />
       </div>
       <div className="section-info ">
-        <h1 className="font-bold">LUNA</h1>
-        <p>MAZA, JOSE MARIA</p>
+        <h2 className="text-3xl font-bold">{book.title}</h2>
+        <p>{book.author}</p>
       </div>
-      <p className="section-origin">Buscado en Antartica.cl</p>
-      <p className="section-description">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores quis
-        vero cumque dolorum pariatur quidem animi consequuntur, sapiente amet
-        odio officiis laborum optio dignissimos aliquam veniam incidunt
-        repudiandae? At, consequatur.
-      </p>
-      <div className="section-number flex justify-around bg-amber-500 rounded-xl text-white">
+      <p className="section-origin lg:text-right">Buscado en {book.origin}</p>
+      <p className="section-description mt-8 leading-loose">{book.summary}</p>
+      <div className=" section-number mt-4 flex justify-around rounded-xl bg-amber-500 p-8 text-center text-white">
         <article>
           <p>Precio</p>
-          <p>$2000</p>
+          <p className="text-2xl font-bold">{book.price}</p>
         </article>
         <article>
           <p>Páginas</p>
-          <p>600</p>
+          <p className="text-2xl font-bold">{book.pages}</p>
         </article>
         <article>
           <p>Año</p>
-          <p>2023</p>
+          <p className="text-2xl font-bold">{book.year}</p>
         </article>
       </div>
     </article>

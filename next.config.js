@@ -12,6 +12,23 @@ module.exports = {
           port: '',
           pathname: '/media/catalog/product/**',
         },
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "images.cdn1.buscalibre.com",
+        },
+        {
+          protocol: "https",
+          hostname: "images.cdn3.buscalibre.com",
+        },
+        {
+          protocol: "https",
+          hostname: "feriachilenadellibro.cl",
+          pathname: "/wp-content/uploads/**"
+        },
       ],
     },
   }

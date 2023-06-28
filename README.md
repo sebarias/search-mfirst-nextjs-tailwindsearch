@@ -13,3 +13,8 @@ se utiliza la configuración de grid area tomada de
 https://youtu.be/mwvthcLX7W4?t=6945 
 se aplica la configuracion en el archivo globals.css 
 y luego se usa el nombre de la clase en el elemento.
+
+### crear interface desde un json
+usar la extención json to TS
+con el comando ctl + shift + alt + v 
+en un archivo con el nombre de la interfaz en una carpeta padre bajo src, llamada interfaces.
