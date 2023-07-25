@@ -39,7 +39,7 @@ const Home = () => {
       `https://search-book-mercadolibre-function-vwp6agkcra-uc.a.run.app?isbn=${isbn}`
     );
     const dataMercadoLibre = await resMercadoLibre.json();
-    setBookAntartica(dataMercadoLibre.data);
+    setBooksMercadoLibre(dataMercadoLibre.data);
   };
 
   return (

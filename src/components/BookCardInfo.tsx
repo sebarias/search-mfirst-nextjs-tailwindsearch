@@ -9,6 +9,7 @@ const BookCardInfo = ({ book }: Props) => {
   return (
     <article className=" grid-areas mt-8 rounded-xl bg-amber-200 p-4 text-amber-500 ">
       <div className="overflow-hidden section-image mr-1 grid place-content-center h-24 w-24 lg:mx-auto lg:h-36 lg:w-36">
+        {book.hasOwnProperty('image') ? 
         <Image
           src={book.image}
           width={100}
@@ -18,6 +19,9 @@ const BookCardInfo = ({ book }: Props) => {
           placeholder="blur"
           blurDataURL={book.image}
         />
+        :
+       <p> no image</p>
+      }
       </div>
       <div className="section-info ">
         <h2 className="text-3xl font-bold">{book.title}</h2>
@@ -37,6 +41,10 @@ const BookCardInfo = ({ book }: Props) => {
         <article>
           <p>Año</p>
           <p className="text-2xl font-bold">{book.year}</p>
+        </article>
+        <article>
+          <p>Condición</p>
+          <p className="text-2xl font-bold">{book.condition}</p>
         </article>
       </div>
     </article>
