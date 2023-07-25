@@ -26,6 +26,10 @@ module.exports = {
         },
         {
           protocol: "https",
+          hostname: "images.cdn2.buscalibre.com",
+        },
+        {
+          protocol: "https",
           hostname: "feriachilenadellibro.cl",
           pathname: "/wp-content/uploads/**"
         },
